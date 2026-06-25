@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Water Quality Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+</head>
+<body>
+  <h1>Water Quality Anomaly Dashboard</h1>
+
+  <canvas id="mseChart" width="600" height="300"></canvas>
+<div id="summary" style="margin-bottom: 20px; background: #fff; padding: 15px; border: 1px solid #ccc;">
+  <h3>📊 Anomaly Summary</h3>
+  <p><strong>Total Predictions:</strong> <span id="total-count">0</span></p>
+  <p><strong>Total Anomalies:</strong> <span id="anomaly-count">0</span></p>
+  <p><strong>Anomaly Rate:</strong> <span id="anomaly-rate">0%</span></p>
+  <p><strong>Last Anomaly:</strong> <span id="last-anomaly">N/A</span></p>
+</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Instance</th>
+        <th>MSE</th>
+        <th>Prediction</th>
+      </tr>
+    </thead>
+    <tbody id="log-table"></tbody>
+  </table>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
